@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <main class="flex-1 flex flex-col items-center justify-start py-8">
+
+        <form class="flex flex-col items-center bg-slate-400 rounded-xl shadow-md p-5 w-full max-w-md mb-4">
+            <h1 class="text-2xl font-bold mb-4">Todo list</h1>
+            <div class="flex w-full gap-2 mb-2">
+                <input type="text" id="Task-input" placeholder="add task"
+                    class="flex-1 min-w-0 px-3 py-2 rounded-md border border-gray-300"/>
+                <input type="date" id="due-date-input"
+                    class="w-36 px-2 py-2 rounded-md border border-gray-300"/>
+                <button type="button" onclick="addTask"
+                    class="bg-blue-500 text-white font-bold px-4 py-2 rounded-md text-xl">+</button>
+            </div>
+        </form>
+
+        <section
+            class="flex flex-row justify-between items-center bg-slate-400 rounded-xl shadow-md p-4 w-full max-w-md mb-6">
+            <div class="flex gap-2">
+                <button
+                    class="complete bg-blue-500 text-white px-4 py-2 rounded-md">COMPLETE</button>
+                <button
+                    class="filter bg-blue-500 text-white px-4 py-2 rounded-md">FILTER</button>
+            </div>
+            <button
+                class="delete bg-blue-500 text-white px-4 py-2 rounded-md">DELETE</button>
+        </section>
+
+        <section class="flex flex-col justify-between items-center bg-slate-400 rounded-xl shadow-md p-4 w-full max-w-md mb-6"">
+            <header class="mb-9">
+                <h2 class="items-center text-2xl font-semibold">Tasks</h2>
+            </header>
+            
+            <div id="task-list">
+                <p>Task is Empty!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
